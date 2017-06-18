@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Third part of homework</title>
+</head>
+<body>
+<h1>Third part of homework</h1>
+<h2>Registration form:</h2>
+<form method="post" enctype="multipart/form-data">
+  <p>
+      <label for="login"><b>Login:</b></label>
+        <input type="text" name="login" required="required" placeholder="Login" id="login"/>
+        </p>
+    <p>
+        <label for="password"><b>Password:</b></label>
+        <input type="password" name="password" required="required" placeholder="password" id="password"/>
+    </p>
+    <p>
+        <label for="email"><b>Email:</b></label>
+        <input type="email" name="email" required="required" placeholder="name@somewhere.com" id="email"/>
+    </p>
+    <p>
+        <label for="phone"><b>Phone:</b></label>
+        <input type="text" name="phone" required="required" placeholder="093 123 45 78" id="phone"/>
+    </p>
+    <p>
+        <label for="hobbies"><b>Hobbies:</b></label>
+        <select id="hobbies" name="hobbies">
+            <option>----</option>
+            <option value="1">Sport</option>
+            <option value="2">Handmade</option>
+            <option value="3">Programming</option>
+        </select>
+    </p>
+    <p>
+        <label><b>Gender:</b></label>
+        <input type="radio" name="gender" value="Male" id="genderMale" /> <label for="genderMale">Male</label>
+        <input type="radio" name="gender" value="Female" id="genderFemale"/><label for="genderFemale">Female</label>
+    </p>
+    <p>
+        <label for="photo"><b>Photo:</b></label>
+        <input type="file" name="photo" id="photo"/>
+    </p>
+    <p>
+
+        <input type="checkbox" name="subscribe" id="subscribe"/><label for="subscribe"><b>Send me your news</b></label>
+    </p>
+<button>Send</button>
+
+</form>
+</body>
+</html>
