@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
+.page {
+    width: 100%;
+}
+
+.container {
+    width: 940px;
+    height: 75px;
+    margin: 0 auto;
+}
+
+.logo {
+    float: left;
+    line-height: 75px;
+}
+
+.logo img{
+    vertical-align: middle;
+}
+
+nav {
+    float: right;
+    line-height: 75px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #bababa;
+    font-family: "Acme", sans-serif;
+    font-weight: 600;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+nav a.active{
+    color: orangered;
+}
+
+nav a:hover{
+    color: dimgrey;
+}
+nav a:last-child{
+    margin-right: 0;
+}
+.line{
+    width: 100%;
+    background: #f3ae9e;
+    height: 60px;
+}
