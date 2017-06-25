@@ -8,6 +8,8 @@
     width: 940px;
     height: 75px;
     margin: 0 auto;
+    padding: 0 10px;
+    background: white;
 }
 
 .logo {
@@ -50,7 +52,37 @@ nav a:last-child{
 }
 
 .slider{
-    margin: -60px 5px 10px;
+    margin: -60px auto 10px;
     background: white;
-    padding: 0 10px;
+    /*padding: 0 10px;*/
+}
+
+.description_slide{
+    color: white;
+    text-transform: capitalize;
+}
+
+.preview-post{
+    min-height: 130px;
+}
+
+.post-img{
+    float: left;
+    display: inline;
+    position: relative;
+    margin: 0 32px 0 0;
+}
+
+.post-img:last-child{
+    margin: 0;
+}
+
+.post{
+    width: 250px;
+    height: 250px;
+    float: left;
+}
+
+.post-title{
+    padding: 10px;
 }
