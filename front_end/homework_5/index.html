@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var isArithmetical = confirm('Do you want to choose Arithmetical progression?');
+
+    if (!isArithmetical)
+        var isGeometrical = confirm('Do you want to choose Geometrical progression?');
+
+    var startNumber = prompt('Please, enter first number of progression');
+    var difference = prompt('Please, enter difference');
+    var n = prompt('Please, enter how many iteration progression must do');
+
+    var text = isArithmetical ? 'arithmetical ' : isGeometrical ? 'geometrical ' : '';
+
+    var result = isArithmetical ? getSumOfFirstNNumbersOfArithmeticalProgression(startNumber, difference, n) :
+        isGeometrical ? getSumOfFirstNNumbersOfGeometricalProgression(startNumber, difference, n) : 0;
+
+
+    alert('Result of sum first ' + n + " " + text + 'progression is ' + result);
+
+
+    function getSumOfFirstNNumbersOfArithmeticalProgression(startNumber, difference, n) {
+        var temp = +startNumber;
+        var result = 0;
+        for (var ii = 0; ii < n; ii++) {
+            result += temp;
+            temp += +difference;
+
+        }
+
+        return result;
+    }
+    function getSumOfFirstNNumbersOfGeometricalProgression(startNumber, difference, n) {
+        var temp = +startNumber;
+        var result = 0;
+        for (var i = 0; i < n; i++) {
+            result += temp;
+            temp *= +difference;
+
+        }
+        return result;
+    }
+</script>
+</body>
+</html>
