@@ -11,7 +11,9 @@ $fileNameMask = 'php';
 
 
 if (isset($_FILES['images'])) {
-    move_uploaded_file($_FILES["images"]["tmp_name"], $dir . '/' . $_FILES['images']['name']);
+    if (is_dir($dir)) {
+        move_uploaded_file($_FILES["images"]["tmp_name"], $dir . '/' . $_FILES['images']['name']);
+    }
     print_r(getTableWithImage($dir));
     die();
 }

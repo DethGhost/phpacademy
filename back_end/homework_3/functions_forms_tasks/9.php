@@ -9,7 +9,7 @@
 header('Content-Type: text/html; charset=utf-8');
 
 if (!empty($_POST['word'])) {
-    die(reverseString($_POST['word']));
+    exit(reverseString($_POST['word']));
 }
 
 $html = "<form action='' method='POST'>
@@ -25,11 +25,11 @@ echo $html;
 // Но думаю можно воспользоваться функцией strrev()
 function reverseString($word)
 {
-    $wordLength = strlen($word);
+    $wordLength = mb_strlen($word);
     $temp = [];
     $counter = $wordLength - 1;
     for ($i = 0; $i < $wordLength; $i++) {
-        $temp[$i] = $word[$counter--];
+        $temp[$i] = mb_substr($word, $counter--, 1, 'utf-8');
     }
 
     $word = implode('', $temp);

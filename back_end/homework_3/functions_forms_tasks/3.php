@@ -12,7 +12,7 @@ if (!empty($_POST['maxWordLength']) && isset($_FILES['file'])) {
 
     $file = $_FILES['file']['tmp_name'];
     print_r(deleteWordsByLength($file, $_POST['maxWordLength']));
-    die();
+    exit();
 }
 
 $html = '<form action="" method="POST" enctype="multipart/form-data">
@@ -37,7 +37,7 @@ function deleteWordsByLength($file, $wordLengs)
     foreach ($array as $word) {
 //        Проблема заключалась в неправильном подсчете кирических символов методом strlen
 //        решение нашел с помощью StackOverFlow
-        if (mb_strlen($word, 'utf-8') < $wordLengs) {
+        if (mb_strlen($word, 'utf-8') > $wordLengs) {
             continue;
         }
         $text .= $word . PHP_EOL;
