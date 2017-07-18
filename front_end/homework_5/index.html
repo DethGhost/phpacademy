@@ -6,43 +6,70 @@
 </head>
 <body>
 <script>
-
+    var n = "";
     var isArithmetical = confirm('Do you want to choose Arithmetical progression?');
 
     if (!isArithmetical)
         var isGeometrical = confirm('Do you want to choose Geometrical progression?');
 
-    var startNumber = prompt('Please, enter first number of progression');
-    var difference = prompt('Please, enter difference');
-    var n = prompt('Please, enter how many iteration progression must do');
+    if (isArithmetical || isGeometrical) {
 
-    var text = isArithmetical ? 'arithmetical ' : isGeometrical ? 'geometrical ' : '';
+        var text = isArithmetical ? 'arithmetical ' : isGeometrical ? 'geometrical ' : '';
+        var result = isArithmetical ? getSumOfFirstNNumbersOfArithmeticalProgression() :
+            isGeometrical ? getSumOfFirstNNumbersOfGeometricalProgression() : 0;
 
-    var result = isArithmetical ? getSumOfFirstNNumbersOfArithmeticalProgression(startNumber, difference, n) :
-        isGeometrical ? getSumOfFirstNNumbersOfGeometricalProgression(startNumber, difference, n) : 0;
+        alert('Result of sum first ' + n + " " + text + 'progression is ' + result);
 
+    } else {
+        alert("Bye");
+    }
 
-    alert('Result of sum first ' + n + " " + text + 'progression is ' + result);
-
-
-    function getSumOfFirstNNumbersOfArithmeticalProgression(startNumber, difference, n) {
+    function getSumOfFirstNNumbersOfArithmeticalProgression() {
+        var startNumber = prompt('Please, enter start number of progression');
+        while (startNumber === '' | isNaN(startNumber)) {
+            alert("You need enter correct start number (Only numbers allowed)");
+            startNumber = prompt('Please, enter first number of progression');
+        }
+        var difference = prompt('Please, enter difference');
+        while (difference === '' | isNaN(difference)) {
+            alert("You need enter correct difference (Only numbers allowed)");
+            difference = prompt('Please, enter difference');
+        }
+        n = prompt('Please, enter how many iteration progression must do');
+        while (n === '' | isNaN(n)) {
+            alert("You need enter number of iteration (Only numbers allowed)");
+            n = prompt('Please, enter how many iteration progression must do');
+        }
         var temp = +startNumber;
         var result = 0;
         for (var ii = 0; ii < n; ii++) {
-            result += temp;
             temp += +difference;
-
+            result += temp;
         }
-
         return result;
     }
-    function getSumOfFirstNNumbersOfGeometricalProgression(startNumber, difference, n) {
+
+    function getSumOfFirstNNumbersOfGeometricalProgression() {
+        var startNumber = prompt('Please, enter start number of progression');
+        while (startNumber === '' | isNaN(+startNumber)) {
+            alert("You need enter correct start number (Only numbers allowed)");
+            startNumber = prompt('Please, enter first number of progression');
+        }
+        var difference = prompt('Please, enter difference');
+        while (difference === '' | isNaN(+difference)) {
+            alert("You need enter correct difference (Only numbers allowed)");
+            difference = prompt('Please, enter difference');
+        }
+        n = prompt('Please, enter how many iteration progression must do');
+        while (n === '' | isNaN(+n)) {
+            alert("You need enter number of iteration (Only numbers allowed)");
+            n = prompt('Please, enter how many iteration progression must do');
+        }
         var temp = +startNumber;
         var result = 0;
         for (var i = 0; i < n; i++) {
-            result += temp;
             temp *= +difference;
-
+            result += temp;
         }
         return result;
     }
