@@ -43,8 +43,9 @@
         var temp = +startNumber;
         var result = 0;
         for (var ii = 0; ii < n; ii++) {
-            temp += +difference;
             result += temp;
+            temp += +difference;
+
         }
         return result;
     }
@@ -52,6 +53,7 @@
     function getSumOfFirstNNumbersOfGeometricalProgression() {
         var startNumber = prompt('Please, enter start number of progression');
         while (startNumber === '' | isNaN(+startNumber)) {
+            startNumber = prompt('Please, enter start number of progression');
             alert("You need enter correct start number (Only numbers allowed)");
             startNumber = prompt('Please, enter first number of progression');
         }
@@ -68,11 +70,13 @@
         var temp = +startNumber;
         var result = 0;
         for (var i = 0; i < n; i++) {
-            temp *= +difference;
             result += temp;
+            temp *= +difference;
+
         }
         return result;
     }
+
 </script>
 </body>
 </html>
