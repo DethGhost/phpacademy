@@ -1,0 +1,50 @@
+[
+  {
+    "message": "\r\n          INSERT INTO `comments` \r\n            SET `name` = 'Viktor', \r\n            `created_at` = 1502535142,\r\n            `updated_at` = 1502535142,\r\n            `comment` = 'This is my first comment',\r\n            `is_moderated` = '0'",
+    "time": 1502535142
+  },
+  {
+    "message": "SELECT * FROM `comments` where `id` = 6 LIMIT 1",
+    "time": 1502535143
+  },
+  {
+    "message": "\r\n        UPDATE `comments` \r\n            SET `name` = 'Viktor',\r\n            `updated_at` = 1502535143,\r\n            `comment` = 'THIS IS NEW COMMENT',\r\n            `is_moderated` = '0' \r\n        WHERE `id` = 6 LIMIT 1",
+    "time": 1502535143
+  },
+  {
+    "message": "SELECT * FROM `comments` where `id` = 6 LIMIT 1",
+    "time": 1502535143
+  },
+  {
+    "message": "\r\n        UPDATE `comments` \r\n            SET `name` = 'Viktor',\r\n            `updated_at` = 1502535143,\r\n            `comment` = 'THIS IS NEW COMMENT',\r\n            `is_moderated` = '1' \r\n        WHERE `id` = 6 LIMIT 1",
+    "time": 1502535143
+  },
+  {
+    "message": "SELECT * FROM `comments`  WHERE `is_moderated` = '0'",
+    "time": 1502535143
+  },
+  {
+    "message": "\r\n          INSERT INTO `comments` \r\n            SET `name` = 'Viktor', \r\n            `created_at` = 1502535144,\r\n            `updated_at` = 1502535144,\r\n            `comment` = 'This is my first comment',\r\n            `is_moderated` = '0'",
+    "time": 1502535144
+  },
+  {
+    "message": "SELECT * FROM `comments` where `id` = 6 LIMIT 1",
+    "time": 1502535144
+  },
+  {
+    "message": "\r\n        UPDATE `comments` \r\n            SET `name` = 'Viktor',\r\n            `updated_at` = 1502535144,\r\n            `comment` = 'THIS IS NEW COMMENT',\r\n            `is_moderated` = '1' \r\n        WHERE `id` = 6 LIMIT 1",
+    "time": 1502535144
+  },
+  {
+    "message": "SELECT * FROM `comments` where `id` = 6 LIMIT 1",
+    "time": 1502535145
+  },
+  {
+    "message": "\r\n        UPDATE `comments` \r\n            SET `name` = 'Viktor',\r\n            `updated_at` = 1502535145,\r\n            `comment` = 'THIS IS NEW COMMENT',\r\n            `is_moderated` = '1' \r\n        WHERE `id` = 6 LIMIT 1",
+    "time": 1502535145
+  },
+  {
+    "message": "SELECT * FROM `comments`  WHERE `is_moderated` = '0'",
+    "time": 1502535145
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "message": "Access denied for user ''@'localhost' to database 'my_shop'",
+    "time": 1502530391
+  },
+  {
+    "message": "Access denied for user ''@'localhost' to database 'my_shop'",
+    "time": 1502530570
+  }
+]
