@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
+.page {
+    width: 100%;
+}
+
+.container {
+    width: 940px;
+
+    margin: 0 auto;
+    padding: 0 10px;
+    background: white;
+}
+
+header {
+    height: 75px;
+}
+
+.logo {
+    float: left;
+    line-height: 75px;
+}
+
+.logo img {
+    vertical-align: middle;
+}
+
+nav {
+    float: right;
+    line-height: 75px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #bababa;
+    font-family: "Acme", sans-serif;
+    font-weight: 600;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+nav a.active {
+    color: orangered;
+}
+
+nav a:hover {
+    color: dimgrey;
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+.line {
+    width: 100%;
+    background: #f3ae9e;
+    height: 60px;
+}
+
+.slider {
+    margin: -60px auto 10px;
+    background: white;
+    /*padding: 0 10px;*/
+}
+
+.description_slide {
+    color: white;
+    text-transform: capitalize;
+}
+
+.preview-post {
+    min-height: 130px;
+}
+
+.post-img {
+    float: left;
+    display: inline;
+    position: relative;
+    margin: 0 32px 0 0;
+}
+
+.post-img:last-child {
+    margin: 0;
+}
+
+.post {
+    width: 33%;
+    float: left;
+}
+
+.post-title {
+    padding: 10px;
+    color: orangered;
+}
+
+.title-text {
+    float: right;
+    font-size: 20px;
+    width: 80%;
+}
+
+.post-descr {
+    height: 200px;
+}
+
+.btn-more button {
+    background: orangered;
+    color: white;
+    border: none;
+    font-family: "Acme", sans-serif;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.portfolio-title {
+    background: url("../img/bg-pattern.png");
+    height: 30px;
+    float: left;
+    width: 100%;
+    line-height: 30px;
+    margin: 20px 0;
+}
+
+.portfolio-title span {
+    background: white;
+    /* height: 30px; */
+    padding: 7px 15px;
+    color: orangered;
+    font-family: "Acme", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.portfolio-item {
+    float: left;
+    margin-right: 17px;
+    border: 1px solid lightgray;
+}
+
+.portfolio-item:last-child {
+    margin: 0;
+}
+
+.p-img {
+    border-bottom: 1px solid lightgray;
+    height: 180px;
+}
+
+.p-item-title {
+    font-family: "Acme", sans-serif;
+    font-size: 20px;
+    color: darkgray;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+
+.p-date {
+    text-transform: uppercase;
+    font-family: "Acme", sans-serif;
+    color: orangered;
+    font-size: 15px;
+    padding: 0 10px;
+}
+
+footer {
+    margin-top: 30px;
+    background: #f3ae9e;
+    /* bottom: 0; */
+    float: left;
+    width: 100%;
+}
+
+.footer-info {
+    background: #e7663c;
+    min-height: 320px;
+}
+
+.f-block {
+    width: 30%;
+    float: left;
+
+    padding: 30px 0 0 30px;
+}
+
+.f-title {
+    font-family: "Acme", sans-serif;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.a-descr {
+    margin: 30px auto;
+    color: white;
+    font-family: "Georgia", sans-serif;
+    font-size: 14px;
+}
+
+.footer-info ul {
+    list-style: none;
+}
+
+.footer-info ul li {
+    margin-left: -40px;
+    padding: 20px 0;
+    color: white;
+}
+
+.footer-info ul li:last-child {
+    padding: 0;
+}
+
+ul.twitter-posts .author {
+    color: #ffb29e;
+    font-style: italic;
+}
+
+div.button{
+    float: left;
+    height: 75px;
+    line-height: 75px;
+}
+
+div.button button{
+    width: 150px;
+    height: 40px;
+    background: antiquewhite;
+    border: 0;
+    box-shadow: black 0px 1px 20px 1px;
+    border-radius: 20px;
+    cursor: pointer;
+    user-select: unset;
+}
+
+#modal{
+    background: rgba(0, 0, 0, 0.58);;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+#modal .modal_content{
+    width: 600px;
+    height: 500px;
+    background: white;
+    margin: 5% auto;
+}
+
+#modal .modal_content span#close{
+    display: block;
+    width: 40px;
+    height: 40px;
+    float: right;
+    text-align: center;
+    line-height: 40px;
+    font-size: 28px;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+#modal .modal_content .contentM{
+    width: 90%;
+    height: 90%;
+    position: relative;
+    margin: auto;
+    padding-top: 5%;
+}
+
+#modal .modal_content .contentM p{
+    margin: 1px 0;
+}
