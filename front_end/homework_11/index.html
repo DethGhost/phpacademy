@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Component() {
+        Component.status = false;
+        this.active = function () {
+            Component.status = true;
+        };
+
+        this.disabled = function () {
+            Component.status = false;
+        };
+
+    }
+
+    function Form() {
+        Component.call(this);
+        var status = false;
+
+
+        this.validate = function () {
+            if (!Component.status)
+                console.log('Error Component is disabled');
+            else
+                console.log("Validation start");
+        };
+
+        this.send = function () {
+            if (!Component.status)
+                console.log('Error Component is disabled');
+            else
+                console.log("Form send something");
+        };
+
+        this.active = function () {
+            new Component().active();
+            status = true;
+            this.validate();
+        };
+
+
+        this.getStatus = function () {
+            return status?console.log("Form is enabled"):console.log("Form is disabled");
+        };
+
+        this.setStatus = function (stat) {
+            if(stat == true || stat == false){
+                stat?new Component().active():new Component().disabled();
+                status = stat;
+            }else {
+                console.log("Allowed variable is TRUE or FALSE without \"\" or ''")
+            }
+
+        };
+
+
+    }
+
+
+</script>
+</body>
+</html>
